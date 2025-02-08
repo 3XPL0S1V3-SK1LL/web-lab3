@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+<h:head>
+    <title>Вторая страница</title>
+    <h:outputStylesheet library="css" name="styles.css"/>
+</h:head>
+<header>
+    Козьяков Арсений Дмитриевич группа P3214 вариант 408815
+</header>
+<h:body>
+    <h1>Welcome to the start page!</h1>
+
+    <h:form>
+        <h:commandButton value="Go to the main page" action="toMain"/>
+    </h:form>
+
+    <div id="clock" style="font-size: 24px; font-weight: bold; margin-top: 20px;">Time is </div>
+
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+
+            const timeString =
+                (hours &lt; 10 ? "0" + hours : hours) + ":" +
+                (minutes &lt; 10 ? "0" + minutes : minutes) + ":" +
+                (seconds &lt; 10 ? "0" + seconds : seconds);
+
+            console.log("Время обновляется:", timeString);  // Для отладки
+
+            const clockElement = document.getElementById('clock');
+            if (clockElement) {
+                clockElement.innerText = timeString;
+            } else {
+                console.error('Элемент с id "clock" не найден!');
+            }
+        }
+
+        setInterval(updateClock, 6000);
+
+        window.onload = updateClock;
+    </script>
+</h:body>
+</html>

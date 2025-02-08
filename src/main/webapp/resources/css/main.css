@@ -1,0 +1,23 @@
+.graph-container {
+    float: right;
+    margin-left: 20px; /* Отступ слева для разделения графика и формы */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: azure;
+    border-color: crimson;
+}
+.form-container {
+    float: left;
+    flex: 1;
+    border-color: crimson;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.table-container {
+    border-color: crimson;
+}

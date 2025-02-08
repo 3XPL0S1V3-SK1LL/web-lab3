@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+}
+.box {
+    flex: 1;
+}
+#graph {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 8px;
+    text-align: center;
+}
+header[lang="ru"] {
+    font-family: monospace !important ;
+    color: blue;
+    font-size: 40px;
+}
+div {
+    border: solid beige;
+    padding: 20px;
+    width: fit-content;
+    height: fit-content;
+}
+label {
+    color: darkcyan;
+}
+.SendButton {
+    background-color: crimson;
+}
+input {
+    background-color: azure;
+}
+div > table {
+    background-color: azure;
+}
+#resultsTable {
+    background-color: azure;
+}
+#rdiv div{
+    width: fit-content;
+    height: fit-content;
+}
